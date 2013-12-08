@@ -1,0 +1,14 @@
+-main ApplicationMain 
+-lib openfl
+-lib openfl-html5-dom
+-cp Source
+-D tools=1.1.6
+-D openfl=1.1
+-D html5
+-D web
+-js Export/html5/bin/Falling.js
+-cp Export/html5/haxe
+-D html5
+-D html
+--remap flash:flash
+-debug

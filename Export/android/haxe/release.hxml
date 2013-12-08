@@ -1,0 +1,16 @@
+-main ApplicationMain 
+-lib openfl
+-lib openfl-native
+-lib hxlibc
+-cp Source
+-D tools=1.1.6
+-D openfl=1.1
+-D android
+-D mobile
+-cp Export/android/haxe
+-cpp Export/android/obj
+--macro allowPackage("flash")
+--macro keep("Main")
+-D android
+-D android-9
+-D no-compilation
