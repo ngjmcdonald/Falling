@@ -25,7 +25,7 @@ class PlatformManager
 	public function new() 
 	{
         platforms = new List<Platform>();
-		for(i in 0...20){
+		for(i in 0...100){
             platforms.add(new Platform());
         }
 		
@@ -35,6 +35,7 @@ class PlatformManager
         var pltfrm:Platform = platforms.pop();
         pltfrm.x = (Math.random() * sWidth);
         pltfrm.y = (Math.random() * sHeight);
+        
         return pltfrm;
     }
     

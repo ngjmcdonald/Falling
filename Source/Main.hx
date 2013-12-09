@@ -28,6 +28,9 @@ class Main extends Sprite {
 	private var acc:Accelerometer;
     private var platformsOnStage:List<Platform>;
     private var jumping:Bool; 
+    private var distance:Float = 0;
+    private var prevDistance:Float = 0;
+    private var cameraMove:Bool = false;
 	
 	
 	private var characterSpeed:Point;
@@ -49,9 +52,8 @@ class Main extends Sprite {
         
 		acceleration = 1;
 		
-		textField.x = 300;
-		textField.y = 300;
-		textField.text = "Hello";
+		textField.x = 50;
+		textField.y = 50;
 		textField.width = 200;
 		
 		addChild(textField);
@@ -62,12 +64,19 @@ class Main extends Sprite {
         character.x = 300;
         character.y = 300;
         
-        for(i in 0...10){
-            
-            var pltfrm:Platform = PlatformManager.instance().getPlatform(stage.stageHeight,stage.stageWidth);
+        
+        for(i in 0...99){
+            var hght:Float = stage.stageHeight;
+            if(i > 10) hght*=-6;
+            var pltfrm:Platform = PlatformManager.instance().getPlatform(hght,stage.stageWidth);
             platformsOnStage.add(pltfrm);
             characterContainer.addChild(pltfrm);       
         }
+            
+        var pltfrm:Platform = PlatformManager.instance().getPlatform(stage.stageHeight,stage.stageWidth);
+        pltfrm.x = character.x;
+        pltfrm.y = character.y +character.height;
+        platformsOnStage.add(pltfrm);
         
 		addChild(characterContainer);
         
@@ -96,7 +105,22 @@ class Main extends Sprite {
 	}
 	
 	private function OnEnterFrame(e:Event) {
-		
+        
+        // trace(distance);
+        
+		//trace(stage.stageHeight + " " + character.y+character.height );
+        var currentHeight:Float = character.y;
+        if(currentHeight < 0){
+            currentHeight = (currentHeight *-1) + stage.stageHeight; 
+        }else{
+            currentHeight = stage.stageHeight - currentHeight;
+        }
+        if(prevDistance < currentHeight){
+            distance = currentHeight;
+        }
+            
+        
+            
         
         // position character on inverse side of screen when the one side is entered
 		if (character.x > stage.stageWidth) {
@@ -107,14 +131,12 @@ class Main extends Sprite {
 		}
         
         // add jump
-        
         for(p in platformsOnStage){
             if(collidingWithPlatform(character,p)){
-                
                 if(characterSpeed.y > 0 && character.y + character.height < p.y + p.height){
-                    characterSpeed.y = -25;    
+                    characterSpeed.y = -25;
+                    
                 }
-                
             }
         }
         //update physics
@@ -124,7 +146,13 @@ class Main extends Sprite {
         
         //apply physics
         character.y += characterSpeed.y;
-        textField.text = Std.string(characterSpeed);
+        
+        
+        if(prevDistance != 0){
+            characterContainer.y += (distance - prevDistance);    
+        }
+  
+        textField.text = Std.string(distance);
         
 		if ((character.y + character.height > stage.stageHeight)) {
             characterSpeed.y = 0;
@@ -140,6 +168,7 @@ class Main extends Sprite {
             character.y +=5;
             character.x += 5;
         }
+        prevDistance = distance;
 	}
 	
 	private function OnAcceleromterChange(e:AccelerometerEvent) {
@@ -156,8 +185,7 @@ class Main extends Sprite {
         var rect1:Rectangle = new Rectangle(obj1.x,obj1.y,obj1.width,obj1.height);
         var rect2:Rectangle = new Rectangle(obj2.x,obj2.y,obj2.width,obj2.height);
         
-        return rect1.intersects(rect2);
-        
+        return rect1.intersects(rect2); 
     }  
     
     

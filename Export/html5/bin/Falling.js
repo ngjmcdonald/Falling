@@ -1236,7 +1236,7 @@ var Main = function() {
 	this.characterSpeed = new flash.geom.Point();
 	this.characterSpeed.x = 25;
 	this.characterSpeed.y = 2;
-	this.acceleration = 0.1;
+	this.acceleration = 1;
 	this.textField.set_x(300);
 	this.textField.set_y(300);
 	this.textField.set_text("Hello");
@@ -1248,9 +1248,9 @@ var Main = function() {
 	this.character.set_x(300);
 	this.character.set_y(300);
 	var _g = 0;
-	while(_g < 5) {
+	while(_g < 10) {
 		var i = _g++;
-		var pltfrm = (PlatformManager._instance == null?PlatformManager._instance = new PlatformManager():PlatformManager._instance).getPlatform();
+		var pltfrm = (PlatformManager._instance == null?PlatformManager._instance = new PlatformManager():PlatformManager._instance).getPlatform(this.get_stage().get_stageHeight(),this.get_stage().get_stageWidth());
 		this.platformsOnStage.add(pltfrm);
 		this.characterContainer.addChild(pltfrm);
 	}
@@ -1264,17 +1264,12 @@ $hxClasses["Main"] = Main;
 Main.__name__ = ["Main"];
 Main.__super__ = flash.display.Sprite;
 Main.prototype = $extend(flash.display.Sprite.prototype,{
-	jump: function() {
-		var _g = this.character;
-		_g.set_y(_g.get_y() - 100);
-	}
-	,collidingWithPlatform: function(obj1,obj2) {
+	collidingWithPlatform: function(obj1,obj2) {
 		var rect1 = new flash.geom.Rectangle(obj1.get_x(),obj1.get_y(),obj1.get_width(),obj1.get_height());
 		var rect2 = new flash.geom.Rectangle(obj2.get_x(),obj2.get_y(),obj2.get_width(),obj2.get_height());
 		return rect1.intersects(rect2);
 	}
 	,OnAcceleromterChange: function(e) {
-		this.textField.set_text(Std.string("X: " + e.accelerationX + " Y: " + e.accelerationY));
 		var speed = this.characterSpeed.x * e.accelerationX;
 		if(e.accelerationX < -0.1 || e.accelerationX > 0.1) {
 			var _g = this.character;
@@ -1282,21 +1277,27 @@ Main.prototype = $extend(flash.display.Sprite.prototype,{
 		}
 	}
 	,OnEnterFrame: function(e) {
+		if(this.character.get_y() < this.get_stage().get_y()) {
+			var _g = this.get_stage();
+			_g.set_y(_g.get_y() + 1);
+		}
 		if(this.character.get_x() > this.get_stage().get_stageWidth()) this.character.set_x(0 - this.character.get_width());
 		if(this.character.get_x() < 0 - this.character.get_width()) this.character.set_x(this.get_stage().get_stageWidth());
 		var $it0 = this.platformsOnStage.iterator();
 		while( $it0.hasNext() ) {
 			var p = $it0.next();
 			if(this.collidingWithPlatform(this.character,p)) {
-				var _g = this.character;
-				_g.set_y(_g.get_y() - 50);
+				if(this.characterSpeed.y > 0 && this.character.get_y() + this.character.get_height() < p.get_y() + p.get_height()) this.characterSpeed.y = -25;
 			}
 		}
-		if(this.character.get_y() + this.character.get_height() < this.get_stage().get_stageHeight()) {
-			var _g = this.character;
-			_g.set_y(_g.get_y() + this.characterSpeed.y);
-			this.characterSpeed.y += this.acceleration;
-		} else this.character.set_y(this.get_stage().get_stageHeight() - this.character.get_height());
+		if(this.characterSpeed.y < 30) this.characterSpeed.y += this.acceleration;
+		var _g = this.character;
+		_g.set_y(_g.get_y() + this.characterSpeed.y);
+		this.textField.set_text(Std.string(this.characterSpeed));
+		if(this.character.get_y() + this.character.get_height() > this.get_stage().get_stageHeight()) {
+			this.characterSpeed.y = 0;
+			this.character.set_y(this.get_stage().get_stageHeight() - this.character.get_height());
+		}
 		if(this.moveLeft) {
 			var _g = this.character;
 			_g.set_x(_g.get_x() - 5);
@@ -1702,10 +1703,10 @@ PlatformManager.prototype = {
 	returnPlatform: function(platfrm) {
 		this.platforms.add(platfrm);
 	}
-	,getPlatform: function() {
+	,getPlatform: function(sHeight,sWidth) {
 		var pltfrm = this.platforms.pop();
-		pltfrm.set_x(Math.random() * 300);
-		pltfrm.set_y(Math.random() * 600);
+		pltfrm.set_x(Math.random() * sWidth);
+		pltfrm.set_y(Math.random() * sHeight);
 		return pltfrm;
 	}
 	,__class__: PlatformManager
