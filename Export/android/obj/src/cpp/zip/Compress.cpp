@@ -20,7 +20,7 @@ namespace zip{
 
 Void Compress_obj::__construct(int level)
 {
-HX_STACK_PUSH("Compress::new","/usr/lib/haxe/std/cpp/zip/Compress.hx",28);
+HX_STACK_PUSH("Compress::new","C:\\HaxeToolkit\\haxe/std/cpp/zip/Compress.hx",28);
 {
 	HX_STACK_LINE(28)
 	this->s = ::cpp::zip::Compress_obj::_deflate_init(level);
@@ -44,7 +44,7 @@ Dynamic Compress_obj::__Create(hx::DynamicArray inArgs)
 
 Void Compress_obj::close( ){
 {
-		HX_STACK_PUSH("Compress::close","/usr/lib/haxe/std/cpp/zip/Compress.hx",40);
+		HX_STACK_PUSH("Compress::close","C:\\HaxeToolkit\\haxe/std/cpp/zip/Compress.hx",40);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(40)
 		::cpp::zip::Compress_obj::_deflate_end(this->s);
@@ -57,7 +57,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Compress_obj,close,(void))
 
 Void Compress_obj::setFlushMode( ::cpp::zip::Flush f){
 {
-		HX_STACK_PUSH("Compress::setFlushMode","/usr/lib/haxe/std/cpp/zip/Compress.hx",36);
+		HX_STACK_PUSH("Compress::setFlushMode","C:\\HaxeToolkit\\haxe/std/cpp/zip/Compress.hx",36);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(f,"f");
 		HX_STACK_LINE(36)
@@ -70,7 +70,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Compress_obj,setFlushMode,(void))
 
 Dynamic Compress_obj::execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos){
-	HX_STACK_PUSH("Compress::execute","/usr/lib/haxe/std/cpp/zip/Compress.hx",32);
+	HX_STACK_PUSH("Compress::execute","C:\\HaxeToolkit\\haxe/std/cpp/zip/Compress.hx",32);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(src,"src");
 	HX_STACK_ARG(srcPos,"srcPos");
@@ -84,7 +84,7 @@ Dynamic Compress_obj::execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Byte
 HX_DEFINE_DYNAMIC_FUNC4(Compress_obj,execute,return )
 
 ::haxe::io::Bytes Compress_obj::run( ::haxe::io::Bytes s,int level){
-	HX_STACK_PUSH("Compress::run","/usr/lib/haxe/std/cpp/zip/Compress.hx",44);
+	HX_STACK_PUSH("Compress::run","C:\\HaxeToolkit\\haxe/std/cpp/zip/Compress.hx",44);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_ARG(level,"level");
 	HX_STACK_LINE(45)

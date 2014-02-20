@@ -23,7 +23,7 @@ namespace zip{
 
 Void Uncompress_obj::__construct(Dynamic windowBits)
 {
-HX_STACK_PUSH("Uncompress::new","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",27);
+HX_STACK_PUSH("Uncompress::new","C:\\HaxeToolkit\\haxe/std/cpp/zip/Uncompress.hx",27);
 {
 	HX_STACK_LINE(27)
 	this->s = ::cpp::zip::Uncompress_obj::_inflate_init(windowBits);
@@ -47,7 +47,7 @@ Dynamic Uncompress_obj::__Create(hx::DynamicArray inArgs)
 
 Void Uncompress_obj::close( ){
 {
-		HX_STACK_PUSH("Uncompress::close","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",39);
+		HX_STACK_PUSH("Uncompress::close","C:\\HaxeToolkit\\haxe/std/cpp/zip/Uncompress.hx",39);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(39)
 		::cpp::zip::Uncompress_obj::_inflate_end(this->s);
@@ -60,7 +60,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Uncompress_obj,close,(void))
 
 Void Uncompress_obj::setFlushMode( ::cpp::zip::Flush f){
 {
-		HX_STACK_PUSH("Uncompress::setFlushMode","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",35);
+		HX_STACK_PUSH("Uncompress::setFlushMode","C:\\HaxeToolkit\\haxe/std/cpp/zip/Uncompress.hx",35);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(f,"f");
 		HX_STACK_LINE(35)
@@ -73,7 +73,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Uncompress_obj,setFlushMode,(void))
 
 Dynamic Uncompress_obj::this_run( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos){
-	HX_STACK_PUSH("Uncompress::this_run","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",31);
+	HX_STACK_PUSH("Uncompress::this_run","C:\\HaxeToolkit\\haxe/std/cpp/zip/Uncompress.hx",31);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(src,"src");
 	HX_STACK_ARG(srcPos,"srcPos");
@@ -87,7 +87,7 @@ Dynamic Uncompress_obj::this_run( ::haxe::io::Bytes src,int srcPos,::haxe::io::B
 HX_DEFINE_DYNAMIC_FUNC4(Uncompress_obj,this_run,return )
 
 ::haxe::io::Bytes Uncompress_obj::run( ::haxe::io::Bytes src,Dynamic bufsize){
-	HX_STACK_PUSH("Uncompress::run","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",43);
+	HX_STACK_PUSH("Uncompress::run","C:\\HaxeToolkit\\haxe/std/cpp/zip/Uncompress.hx",43);
 	HX_STACK_ARG(src,"src");
 	HX_STACK_ARG(bufsize,"bufsize");
 	HX_STACK_LINE(44)

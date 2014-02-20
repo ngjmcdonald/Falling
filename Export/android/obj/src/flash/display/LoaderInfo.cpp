@@ -135,7 +135,7 @@ Void LoaderInfo_obj::load( ::flash::net::URLRequest request){
 		HX_STACK_LINE(72)
 		::String extension = (  (((dot > (int)0))) ? ::String(this->__pendingURL.substr((dot + (int)1),null()).toLowerCase()) : ::String(HX_CSTRING("")) );		HX_STACK_VAR(extension,"extension");
 		struct _Function_1_1{
-			inline static ::String Block( ::flash::display::LoaderInfo_obj *__this,::String &extension){
+			inline static ::String Block( ::String &extension,::flash::display::LoaderInfo_obj *__this){
 				HX_STACK_PUSH("*::closure","flash/display/LoaderInfo.hx",74);
 				{
 					HX_STACK_LINE(74)
@@ -167,7 +167,7 @@ Void LoaderInfo_obj::load( ::flash::net::URLRequest request){
 			}
 		};
 		HX_STACK_LINE(74)
-		this->contentType = _Function_1_1::Block(this,extension);
+		this->contentType = _Function_1_1::Block(extension,this);
 		HX_STACK_LINE(85)
 		this->url = null();
 		HX_STACK_LINE(87)

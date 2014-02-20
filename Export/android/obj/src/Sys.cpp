@@ -27,7 +27,7 @@ Dynamic Sys_obj::__Create(hx::DynamicArray inArgs)
 
 Void Sys_obj::print( Dynamic v){
 {
-		HX_STACK_PUSH("Sys::print","/usr/lib/haxe/std/cpp/_std/Sys.hx",24);
+		HX_STACK_PUSH("Sys::print","C:\\HaxeToolkit\\haxe/std/cpp/_std/Sys.hx",24);
 		HX_STACK_ARG(v,"v");
 		HX_STACK_LINE(24)
 		::__hxcpp_print(v);
@@ -40,7 +40,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,print,(void))
 
 Void Sys_obj::println( Dynamic v){
 {
-		HX_STACK_PUSH("Sys::println","/usr/lib/haxe/std/cpp/_std/Sys.hx",28);
+		HX_STACK_PUSH("Sys::println","C:\\HaxeToolkit\\haxe/std/cpp/_std/Sys.hx",28);
 		HX_STACK_ARG(v,"v");
 		HX_STACK_LINE(29)
 		::Sys_obj::print(v);
@@ -55,7 +55,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Sys_obj,println,(void))
 
 Void Sys_obj::exit( int code){
 {
-		HX_STACK_PUSH("Sys::exit","/usr/lib/haxe/std/cpp/_std/Sys.hx",107);
+		HX_STACK_PUSH("Sys::exit","C:\\HaxeToolkit\\haxe/std/cpp/_std/Sys.hx",107);
 		HX_STACK_ARG(code,"code");
 		HX_STACK_LINE(107)
 		::Sys_obj::sys_exit(code);

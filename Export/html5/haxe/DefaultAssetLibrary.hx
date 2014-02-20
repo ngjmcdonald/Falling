@@ -38,6 +38,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/character.png", __ASSET__assets_character_png);
 		type.set ("assets/character.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		className.set ("assets/Jump.wav", __ASSET__assets_jump_wav);
+		type.set ("assets/Jump.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 		className.set ("assets/platform.png", __ASSET__assets_platform_png);
 		type.set ("assets/platform.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
@@ -46,6 +48,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		path.set ("assets/character.png", "assets/character.png");
 		type.set ("assets/character.png", Reflect.field (AssetType, "image".toUpperCase ()));
+		path.set ("assets/Jump.wav", "assets/Jump.wav");
+		type.set ("assets/Jump.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 		path.set ("assets/platform.png", "assets/platform.png");
 		type.set ("assets/platform.png", Reflect.field (AssetType, "image".toUpperCase ()));
 		
@@ -423,10 +427,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 #elseif flash
 
 class __ASSET__assets_character_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
+class __ASSET__assets_jump_wav extends null { }
 class __ASSET__assets_platform_png extends flash.display.BitmapData { public function new () { super (0, 0); } }
 
 
 #elseif html5
+
 
 
 

@@ -40,7 +40,7 @@ class HXCPP_CLASS_ATTRIBUTES  PlatformManager_obj : public hx::Object{
 		virtual Void returnPlatform( ::Platform platfrm);
 		Dynamic returnPlatform_dyn();
 
-		virtual ::Platform getPlatform( Float sHeight,Float sWidth);
+		virtual ::Platform getPlatform( Float sHeight,Float sWidth,hx::Null< bool >  isSetLocation);
 		Dynamic getPlatform_dyn();
 
 		::List platforms;

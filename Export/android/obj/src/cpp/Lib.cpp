@@ -24,7 +24,7 @@ Dynamic Lib_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 Dynamic Lib_obj::load( ::String lib,::String prim,int nargs){
-	HX_STACK_PUSH("Lib::load","/usr/lib/haxe/std/cpp/Lib.hx",29);
+	HX_STACK_PUSH("Lib::load","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",29);
 	HX_STACK_ARG(lib,"lib");
 	HX_STACK_ARG(prim,"prim");
 	HX_STACK_ARG(nargs,"nargs");
@@ -36,7 +36,7 @@ Dynamic Lib_obj::load( ::String lib,::String prim,int nargs){
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(Lib_obj,load,return )
 
 Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
-	HX_STACK_PUSH("Lib::loadLazy","/usr/lib/haxe/std/cpp/Lib.hx",48);
+	HX_STACK_PUSH("Lib::loadLazy","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",48);
 	HX_STACK_ARG(lib,"lib");
 	HX_STACK_ARG(prim,"prim");
 	HX_STACK_ARG(nargs,"nargs");
@@ -57,7 +57,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e1)
 						Void run(){
-							HX_STACK_PUSH("*::_Function_3_1","/usr/lib/haxe/std/cpp/Lib.hx",53);
+							HX_STACK_PUSH("*::_Function_3_1","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",53);
 							{
 								HX_STACK_LINE(53)
 								hx::Throw (e1->__GetItem((int)0));
@@ -74,7 +74,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e1)
 						Void run(Dynamic _1,Dynamic _2){
-							HX_STACK_PUSH("*::_Function_3_1","/usr/lib/haxe/std/cpp/Lib.hx",54);
+							HX_STACK_PUSH("*::_Function_3_1","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",54);
 							HX_STACK_ARG(_1,"_1");
 							HX_STACK_ARG(_2,"_2");
 							{
@@ -93,7 +93,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e1)
 						Void run(Dynamic _1,Dynamic _2,Dynamic _3){
-							HX_STACK_PUSH("*::_Function_3_1","/usr/lib/haxe/std/cpp/Lib.hx",55);
+							HX_STACK_PUSH("*::_Function_3_1","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",55);
 							HX_STACK_ARG(_1,"_1");
 							HX_STACK_ARG(_2,"_2");
 							HX_STACK_ARG(_3,"_3");
@@ -113,7 +113,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e1)
 						Void run(Dynamic _1,Dynamic _2,Dynamic _3,Dynamic _4){
-							HX_STACK_PUSH("*::_Function_3_1","/usr/lib/haxe/std/cpp/Lib.hx",56);
+							HX_STACK_PUSH("*::_Function_3_1","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",56);
 							HX_STACK_ARG(_1,"_1");
 							HX_STACK_ARG(_2,"_2");
 							HX_STACK_ARG(_3,"_3");
@@ -134,7 +134,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e1)
 						Void run(Dynamic _1,Dynamic _2,Dynamic _3,Dynamic _4,Dynamic _5){
-							HX_STACK_PUSH("*::_Function_3_1","/usr/lib/haxe/std/cpp/Lib.hx",57);
+							HX_STACK_PUSH("*::_Function_3_1","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",57);
 							HX_STACK_ARG(_1,"_1");
 							HX_STACK_ARG(_2,"_2");
 							HX_STACK_ARG(_3,"_3");
@@ -156,7 +156,7 @@ Dynamic Lib_obj::loadLazy( ::String lib,::String prim,int nargs){
 
 						HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Dynamic,e1)
 						Void run(Dynamic _1){
-							HX_STACK_PUSH("*::_Function_3_1","/usr/lib/haxe/std/cpp/Lib.hx",58);
+							HX_STACK_PUSH("*::_Function_3_1","C:\\HaxeToolkit\\haxe/std/cpp/Lib.hx",58);
 							HX_STACK_ARG(_1,"_1");
 							{
 								HX_STACK_LINE(58)

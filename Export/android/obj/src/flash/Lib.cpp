@@ -223,7 +223,7 @@ int flags = __o_flags.Default(15);
 		HX_STACK_LINE(87)
 		Dynamic create_main_frame = ::flash::Lib_obj::load(HX_CSTRING("nme"),HX_CSTRING("nme_create_main_frame"),(int)-1);		HX_STACK_VAR(create_main_frame,"create_main_frame");
 
-		HX_BEGIN_LOCAL_FUNC_S6(hx::LocalFunc,_Function_1_1,Array< Float >,frameRate1,Array< int >,width1,Array< ::Dynamic >,stageClass1,Array< int >,color1,Array< int >,height1,Dynamic,onLoaded1)
+		HX_BEGIN_LOCAL_FUNC_S6(hx::LocalFunc,_Function_1_1,Array< int >,width1,Array< Float >,frameRate1,Array< int >,color1,Dynamic,onLoaded1,Array< ::Dynamic >,stageClass1,Array< int >,height1)
 		Void run(Dynamic frameHandle){
 			HX_STACK_PUSH("*::_Function_1_1","flash/Lib.hx",89);
 			HX_STACK_ARG(frameHandle,"frameHandle");
@@ -265,7 +265,7 @@ int flags = __o_flags.Default(15);
 		HX_END_LOCAL_FUNC1((void))
 
 		HX_STACK_LINE(89)
-		create_main_frame( Dynamic(new _Function_1_1(frameRate1,width1,stageClass1,color1,height1,onLoaded1)),width1->__get((int)0),height1->__get((int)0),flags,title,(  (((icon == null()))) ? Dynamic(null()) : Dynamic(icon->__handle) ));
+		create_main_frame( Dynamic(new _Function_1_1(width1,frameRate1,color1,onLoaded1,stageClass1,height1)),width1->__get((int)0),height1->__get((int)0),flags,title,(  (((icon == null()))) ? Dynamic(null()) : Dynamic(icon->__handle) ));
 	}
 return null();
 }

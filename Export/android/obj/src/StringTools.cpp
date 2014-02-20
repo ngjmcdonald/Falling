@@ -23,7 +23,7 @@ Dynamic StringTools_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::String StringTools_obj::urlEncode( ::String s){
-	HX_STACK_PUSH("StringTools::urlEncode","/usr/lib/haxe/std/StringTools.hx",37);
+	HX_STACK_PUSH("StringTools::urlEncode","C:\\HaxeToolkit\\haxe/std/StringTools.hx",37);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_LINE(37)
 	return s.__URLEncode();
@@ -33,7 +33,7 @@ Dynamic StringTools_obj::__Create(hx::DynamicArray inArgs)
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlEncode,return )
 
 ::String StringTools_obj::urlDecode( ::String s){
-	HX_STACK_PUSH("StringTools::urlDecode","/usr/lib/haxe/std/StringTools.hx",62);
+	HX_STACK_PUSH("StringTools::urlDecode","C:\\HaxeToolkit\\haxe/std/StringTools.hx",62);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_LINE(62)
 	return s.__URLDecode();
@@ -43,7 +43,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlEncode,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlDecode,return )
 
 ::String StringTools_obj::replace( ::String s,::String sub,::String by){
-	HX_STACK_PUSH("StringTools::replace","/usr/lib/haxe/std/StringTools.hx",288);
+	HX_STACK_PUSH("StringTools::replace","C:\\HaxeToolkit\\haxe/std/StringTools.hx",288);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_ARG(sub,"sub");
 	HX_STACK_ARG(by,"by");

@@ -5,6 +5,8 @@ import flash.display.Sprite;
 import flash.display.Bitmap;
 import flash.events.KeyboardEvent;
 import flash.geom.Point;
+import flash.net.URLLoader;
+import flash.net.URLRequest;
 import flash.ui.Keyboard;
 import flash.events.Event;
 import openfl.Assets;
@@ -13,6 +15,9 @@ import flash.sensors.Accelerometer;
 import flash.text.TextField;
 import flash.text.TextFormat;
 import flash.geom.Rectangle;
+import flash.media.Sound;
+import flash.utils.Timer;
+import flash.xml.XML;
 
 
 
@@ -29,9 +34,10 @@ class Main extends Sprite {
     private var platformsOnStage:List<Platform>;
     private var jumping:Bool; 
     private var distance:Float = 0;
+	private var generateTilesPoint:Float = 0;
     private var prevDistance:Float = 0;
     private var cameraMove:Bool = false;
-	
+	private var jumpSound:Sound;
 	
 	private var characterSpeed:Point;
 	private var characterAccel:Point;
@@ -40,6 +46,13 @@ class Main extends Sprite {
 	public function new () {
 		
 		super ();
+		jumpSound = Assets.getSound("assets/Jump.wav");
+		var url:URLRequest = new URLRequest("assets/note.txt");
+		var urlLoader:URLLoader = new URLLoader();
+		urlLoader.
+		//Xml.parse();
+		
+		
 		platformsOnStage = new List<Platform>();
         
         
@@ -47,10 +60,10 @@ class Main extends Sprite {
 		acc = new Accelerometer();
         characterSpeed = new Point();
 		
-		characterSpeed.x = 25;
-		characterSpeed.y = 2;
+		characterSpeed.x = 30;
+		characterSpeed.y = 0.5;
         
-		acceleration = 1;
+		acceleration = 0.1;
 		
 		textField.x = 50;
 		textField.y = 50;
@@ -65,18 +78,30 @@ class Main extends Sprite {
         character.y = 300;
         
         
-        for(i in 0...99){
-            var hght:Float = stage.stageHeight;
-            if(i > 10) hght*=-6;
-            var pltfrm:Platform = PlatformManager.instance().getPlatform(hght,stage.stageWidth);
-            platformsOnStage.add(pltfrm);
-            characterContainer.addChild(pltfrm);       
+        for(i in 0...3){
+            //var hght:Float = stage.stageHeight;
+            //if(i > 10) hght*=-6;
+			var pltfrm:Platform = null;
+			if (i == 0) {
+				var pos:Point = new Point(character.x,character.y +character.height);
+				pltfrm = PlatformManager.instance().getPlatform(pos, true);
+			}else if (i == 1) {
+				var pos:Point = new Point(350,200);
+				pltfrm = PlatformManager.instance().getPlatform(pos,true);
+			}else if (i == 2) {
+				var pos:Point = new Point(350,-100);
+				pltfrm = PlatformManager.instance().getPlatform(pos,true);
+			}
+			platformsOnStage.add(pltfrm);
+			characterContainer.addChild(pltfrm);       
         }
+		
             
-        var pltfrm:Platform = PlatformManager.instance().getPlatform(stage.stageHeight,stage.stageWidth);
-        pltfrm.x = character.x;
-        pltfrm.y = character.y +character.height;
+        /*var pltfrm:Platform = PlatformManager.instance().getPlatform(stage.stageHeight,stage.stageWidth);
+        pltfrm.x = ;
+        pltfrm.y = ;
         platformsOnStage.add(pltfrm);
+		characterContainer.addChild(pltfrm);*/
         
 		addChild(characterContainer);
         
@@ -117,6 +142,35 @@ class Main extends Sprite {
         }
         if(prevDistance < currentHeight){
             distance = currentHeight;
+			//trace(distance % 300 + " " + distance * .03);
+			generateTilesPoint += (distance - prevDistance);
+			//trace(generateTilesPoint + " " + stage.stageHeight);
+			if (generateTilesPoint > stage.stageHeight/2) {
+				generateTilesPoint = 0;
+				// remove platforms from bottom
+				if (PlatformManager.instance().getPlatforms().length < 10) {
+					
+					for (p in platformsOnStage) {
+						
+						if (Math.abs(p.y - character.y) >  600) {
+							platformsOnStage.remove(p);
+							characterContainer.removeChild(p);
+							PlatformManager.instance().returnPlatform(p);
+							
+						}
+					}
+				}// add new platforms above
+				var pltfrm:Platform = null;
+				for (i in 0...5) {
+					var newGenPoint:Float = (distance - 100);
+					var pos1:Point = new Point(stage.stageWidth,newGenPoint);
+					
+					pltfrm = PlatformManager.instance().getPlatform(pos1);
+					
+					platformsOnStage.add(pltfrm);
+					characterContainer.addChild(pltfrm); 
+				}
+			}
         }
             
         
@@ -134,8 +188,8 @@ class Main extends Sprite {
         for(p in platformsOnStage){
             if(collidingWithPlatform(character,p)){
                 if(characterSpeed.y > 0 && character.y + character.height < p.y + p.height){
-                    characterSpeed.y = -25;
-                    
+                    characterSpeed.y = -10;
+                    jumpSound.play();
                 }
             }
         }
@@ -162,10 +216,8 @@ class Main extends Sprite {
 		
 		if (moveLeft){
             character.x -= 5;
-            character.y -=5;
         }
 		if(moveRight){
-            character.y +=5;
             character.x += 5;
         }
         prevDistance = distance;

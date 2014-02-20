@@ -6,7 +6,7 @@
 
 Void StringBuf_obj::__construct()
 {
-HX_STACK_PUSH("StringBuf::new","/usr/lib/haxe/std/cpp/_std/StringBuf.hx",27);
+HX_STACK_PUSH("StringBuf::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/StringBuf.hx",27);
 {
 	HX_STACK_LINE(27)
 	this->b = Array_obj< ::String >::__new();

@@ -15,7 +15,7 @@ namespace _Process{
 
 Void Stdin_obj::__construct(Dynamic p)
 {
-HX_STACK_PUSH("Stdin::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",29);
+HX_STACK_PUSH("Stdin::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",29);
 {
 	HX_STACK_LINE(30)
 	this->p = p;

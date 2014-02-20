@@ -14,7 +14,7 @@ namespace ds{
 
 Void ObjectMap_obj::__construct()
 {
-HX_STACK_PUSH("ObjectMap::new","/usr/lib/haxe/std/cpp/_std/haxe/ds/ObjectMap.hx",29);
+HX_STACK_PUSH("ObjectMap::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/ObjectMap.hx",29);
 {
 	HX_STACK_LINE(29)
 	this->__Internal = ::haxe::ds::IntMap_obj::__new();

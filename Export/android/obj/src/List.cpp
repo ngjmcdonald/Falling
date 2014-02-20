@@ -6,7 +6,7 @@
 
 Void List_obj::__construct()
 {
-HX_STACK_PUSH("List::new","/usr/lib/haxe/std/List.hx",40);
+HX_STACK_PUSH("List::new","C:\\HaxeToolkit\\haxe/std/List.hx",40);
 {
 	HX_STACK_LINE(40)
 	this->length = (int)0;
@@ -29,18 +29,18 @@ Dynamic List_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 Dynamic List_obj::iterator( ){
-	HX_STACK_PUSH("List::iterator","/usr/lib/haxe/std/List.hx",161);
+	HX_STACK_PUSH("List::iterator","C:\\HaxeToolkit\\haxe/std/List.hx",161);
 	HX_STACK_THIS(this);
 	struct _Function_1_1{
 		inline static Dynamic Block( ::List_obj *__this){
-			HX_STACK_PUSH("*::closure","/usr/lib/haxe/std/List.hx",179);
+			HX_STACK_PUSH("*::closure","C:\\HaxeToolkit\\haxe/std/List.hx",179);
 			{
 				hx::Anon __result = hx::Anon_obj::Create();
 				__result->Add(HX_CSTRING("h") , __this->h,false);
 
 				HX_BEGIN_LOCAL_FUNC_S0(hx::LocalThisFunc,_Function_2_1)
 				Dynamic run(){
-					HX_STACK_PUSH("*::_Function_2_1","/usr/lib/haxe/std/List.hx",181);
+					HX_STACK_PUSH("*::_Function_2_1","C:\\HaxeToolkit\\haxe/std/List.hx",181);
 					HX_STACK_THIS(__this.mPtr);
 					{
 						HX_STACK_LINE(181)
@@ -54,7 +54,7 @@ Dynamic List_obj::iterator( ){
 
 				HX_BEGIN_LOCAL_FUNC_S0(hx::LocalThisFunc,_Function_2_2)
 				Dynamic run(){
-					HX_STACK_PUSH("*::_Function_2_2","/usr/lib/haxe/std/List.hx",184);
+					HX_STACK_PUSH("*::_Function_2_2","C:\\HaxeToolkit\\haxe/std/List.hx",184);
 					HX_STACK_THIS(__this.mPtr);
 					{
 						HX_STACK_LINE(186)
@@ -87,7 +87,7 @@ Dynamic List_obj::iterator( ){
 HX_DEFINE_DYNAMIC_FUNC0(List_obj,iterator,return )
 
 bool List_obj::remove( Dynamic v){
-	HX_STACK_PUSH("List::remove","/usr/lib/haxe/std/List.hx",138);
+	HX_STACK_PUSH("List::remove","C:\\HaxeToolkit\\haxe/std/List.hx",138);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(v,"v");
 	HX_STACK_LINE(139)
@@ -130,7 +130,7 @@ bool List_obj::remove( Dynamic v){
 HX_DEFINE_DYNAMIC_FUNC1(List_obj,remove,return )
 
 bool List_obj::isEmpty( ){
-	HX_STACK_PUSH("List::isEmpty","/usr/lib/haxe/std/List.hx",114);
+	HX_STACK_PUSH("List::isEmpty","C:\\HaxeToolkit\\haxe/std/List.hx",114);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(114)
 	return (this->h == null());
@@ -140,7 +140,7 @@ bool List_obj::isEmpty( ){
 HX_DEFINE_DYNAMIC_FUNC0(List_obj,isEmpty,return )
 
 Dynamic List_obj::pop( ){
-	HX_STACK_PUSH("List::pop","/usr/lib/haxe/std/List.hx",100);
+	HX_STACK_PUSH("List::pop","C:\\HaxeToolkit\\haxe/std/List.hx",100);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(101)
 	if (((this->h == null()))){
@@ -167,7 +167,7 @@ HX_DEFINE_DYNAMIC_FUNC0(List_obj,pop,return )
 
 Void List_obj::push( Dynamic item){
 {
-		HX_STACK_PUSH("List::push","/usr/lib/haxe/std/List.hx",64);
+		HX_STACK_PUSH("List::push","C:\\HaxeToolkit\\haxe/std/List.hx",64);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(item,"item");
 		HX_STACK_LINE(65)
@@ -190,7 +190,7 @@ HX_DEFINE_DYNAMIC_FUNC1(List_obj,push,(void))
 
 Void List_obj::add( Dynamic item){
 {
-		HX_STACK_PUSH("List::add","/usr/lib/haxe/std/List.hx",49);
+		HX_STACK_PUSH("List::add","C:\\HaxeToolkit\\haxe/std/List.hx",49);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(item,"item");
 		HX_STACK_LINE(50)

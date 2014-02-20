@@ -192,7 +192,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Timer_obj,GetMS,return )
 	HX_STACK_LINE(220)
 	Array< ::Dynamic > t = Array_obj< ::Dynamic >::__new().Add(::haxe::Timer_obj::__new(time));		HX_STACK_VAR(t,"t");
 
-	HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_1_1,Dynamic,f1,Array< ::Dynamic >,t)
+	HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_1_1,Array< ::Dynamic >,t,Dynamic,f1)
 	Void run(){
 		HX_STACK_PUSH("*::_Function_1_1","haxe/Timer.hx",222);
 		{
@@ -206,7 +206,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Timer_obj,GetMS,return )
 	HX_END_LOCAL_FUNC0((void))
 
 	HX_STACK_LINE(222)
-	t->__get((int)0).StaticCast< ::haxe::Timer >()->run =  Dynamic(new _Function_1_1(f1,t));
+	t->__get((int)0).StaticCast< ::haxe::Timer >()->run =  Dynamic(new _Function_1_1(t,f1));
 	HX_STACK_LINE(227)
 	return t->__get((int)0).StaticCast< ::haxe::Timer >();
 }

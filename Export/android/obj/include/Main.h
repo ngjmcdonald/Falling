@@ -63,6 +63,9 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::flash::display::Sprite_obj{
 		Float acceleration;
 		::flash::geom::Point characterAccel;
 		::flash::geom::Point characterSpeed;
+		bool cameraMove;
+		Float prevDistance;
+		Float distance;
 		bool jumping;
 		::List platformsOnStage;
 		::flash::sensors::Accelerometer acc;

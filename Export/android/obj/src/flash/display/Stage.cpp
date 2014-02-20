@@ -881,7 +881,7 @@ Void Stage_obj::__onJoystick( Dynamic event,::String type){
 		::String _switch_1 = (type);
 		if (  ( _switch_1==HX_CSTRING("axisMove"))){
 			struct _Function_2_1{
-				inline static Array< Float > Block( ::flash::display::Stage_obj *__this,Dynamic &event){
+				inline static Array< Float > Block( Dynamic &event,::flash::display::Stage_obj *__this){
 					HX_STACK_PUSH("*::closure","flash/display/Stage.hx",601);
 					{
 						HX_STACK_LINE(601)
@@ -893,7 +893,7 @@ Void Stage_obj::__onJoystick( Dynamic event,::String type){
 				}
 			};
 			HX_STACK_LINE(601)
-			Array< Float > data = _Function_2_1::Block(this,event);		HX_STACK_VAR(data,"data");
+			Array< Float > data = _Function_2_1::Block(event,this);		HX_STACK_VAR(data,"data");
 			HX_STACK_LINE(602)
 			if (((data == null()))){
 				HX_STACK_LINE(602)
@@ -1307,7 +1307,7 @@ try {
 				;break;
 				case (int)16: {
 					struct _Function_3_1{
-						inline static ::flash::display::TouchInfo Block( ::flash::display::Stage_obj *__this,Dynamic &event){
+						inline static ::flash::display::TouchInfo Block( Dynamic &event,::flash::display::Stage_obj *__this){
 							HX_STACK_PUSH("*::closure","flash/display/Stage.hx",396);
 							{
 								HX_STACK_LINE(396)
@@ -1319,14 +1319,14 @@ try {
 						}
 					};
 					HX_STACK_LINE(396)
-					::flash::display::TouchInfo touchInfo = _Function_3_1::Block(this,event);		HX_STACK_VAR(touchInfo,"touchInfo");
+					::flash::display::TouchInfo touchInfo = _Function_3_1::Block(event,this);		HX_STACK_VAR(touchInfo,"touchInfo");
 					HX_STACK_LINE(397)
 					this->__onTouch(event,::flash::events::TouchEvent_obj::TOUCH_MOVE,touchInfo);
 				}
 				;break;
 				case (int)17: {
 					struct _Function_3_1{
-						inline static ::flash::display::TouchInfo Block( ::flash::display::Stage_obj *__this,Dynamic &event){
+						inline static ::flash::display::TouchInfo Block( Dynamic &event,::flash::display::Stage_obj *__this){
 							HX_STACK_PUSH("*::closure","flash/display/Stage.hx",401);
 							{
 								HX_STACK_LINE(401)
@@ -1338,7 +1338,7 @@ try {
 						}
 					};
 					HX_STACK_LINE(401)
-					::flash::display::TouchInfo touchInfo = _Function_3_1::Block(this,event);		HX_STACK_VAR(touchInfo,"touchInfo");
+					::flash::display::TouchInfo touchInfo = _Function_3_1::Block(event,this);		HX_STACK_VAR(touchInfo,"touchInfo");
 					HX_STACK_LINE(402)
 					this->__onTouch(event,::flash::events::TouchEvent_obj::TOUCH_END,touchInfo);
 					HX_STACK_LINE(403)

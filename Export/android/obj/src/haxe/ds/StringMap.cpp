@@ -11,11 +11,11 @@ namespace ds{
 
 Void StringMap_obj::__construct()
 {
-HX_STACK_PUSH("StringMap::new","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",27);
+HX_STACK_PUSH("StringMap::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",27);
 {
 	struct _Function_1_1{
 		inline static Dynamic Block( ){
-			HX_STACK_PUSH("*::closure","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",28);
+			HX_STACK_PUSH("*::closure","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",28);
 			{
 				hx::Anon __result = hx::Anon_obj::Create();
 				return __result;
@@ -49,7 +49,7 @@ hx::Object *StringMap_obj::__ToInterface(const hx::type_info &inType) {
 }
 
 Dynamic StringMap_obj::keys( ){
-	HX_STACK_PUSH("StringMap::keys","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",50);
+	HX_STACK_PUSH("StringMap::keys","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",50);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(51)
 	Array< ::String > a = Array_obj< ::String >::__new();		HX_STACK_VAR(a,"a");
@@ -63,7 +63,7 @@ Dynamic StringMap_obj::keys( ){
 HX_DEFINE_DYNAMIC_FUNC0(StringMap_obj,keys,return )
 
 bool StringMap_obj::remove( ::String key){
-	HX_STACK_PUSH("StringMap::remove","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",43);
+	HX_STACK_PUSH("StringMap::remove","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",43);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(key,"key");
 	HX_STACK_LINE(43)
@@ -74,7 +74,7 @@ bool StringMap_obj::remove( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,remove,return )
 
 bool StringMap_obj::exists( ::String key){
-	HX_STACK_PUSH("StringMap::exists","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",39);
+	HX_STACK_PUSH("StringMap::exists","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",39);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(key,"key");
 	HX_STACK_LINE(39)
@@ -85,7 +85,7 @@ bool StringMap_obj::exists( ::String key){
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,exists,return )
 
 Dynamic StringMap_obj::get( ::String key){
-	HX_STACK_PUSH("StringMap::get","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",35);
+	HX_STACK_PUSH("StringMap::get","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",35);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(key,"key");
 	HX_STACK_LINE(35)
@@ -97,7 +97,7 @@ HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,get,return )
 
 Void StringMap_obj::set( ::String key,Dynamic value){
 {
-		HX_STACK_PUSH("StringMap::set","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",31);
+		HX_STACK_PUSH("StringMap::set","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/StringMap.hx",31);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(key,"key");
 		HX_STACK_ARG(value,"value");

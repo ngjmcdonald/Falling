@@ -11,7 +11,7 @@ namespace ds{
 
 Void IntMap_obj::__construct()
 {
-HX_STACK_PUSH("IntMap::new","/usr/lib/haxe/std/cpp/_std/haxe/ds/IntMap.hx",28);
+HX_STACK_PUSH("IntMap::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/IntMap.hx",28);
 {
 	HX_STACK_LINE(28)
 	this->h = ::__int_hash_create();
@@ -39,7 +39,7 @@ hx::Object *IntMap_obj::__ToInterface(const hx::type_info &inType) {
 }
 
 bool IntMap_obj::remove( int key){
-	HX_STACK_PUSH("IntMap::remove","/usr/lib/haxe/std/cpp/_std/haxe/ds/IntMap.hx",44);
+	HX_STACK_PUSH("IntMap::remove","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/IntMap.hx",44);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(key,"key");
 	HX_STACK_LINE(44)
@@ -50,7 +50,7 @@ bool IntMap_obj::remove( int key){
 HX_DEFINE_DYNAMIC_FUNC1(IntMap_obj,remove,return )
 
 Dynamic IntMap_obj::get( int key){
-	HX_STACK_PUSH("IntMap::get","/usr/lib/haxe/std/cpp/_std/haxe/ds/IntMap.hx",36);
+	HX_STACK_PUSH("IntMap::get","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/IntMap.hx",36);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(key,"key");
 	HX_STACK_LINE(36)
@@ -62,7 +62,7 @@ HX_DEFINE_DYNAMIC_FUNC1(IntMap_obj,get,return )
 
 Void IntMap_obj::set( int key,Dynamic value){
 {
-		HX_STACK_PUSH("IntMap::set","/usr/lib/haxe/std/cpp/_std/haxe/ds/IntMap.hx",32);
+		HX_STACK_PUSH("IntMap::set","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/ds/IntMap.hx",32);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(key,"key");
 		HX_STACK_ARG(value,"value");

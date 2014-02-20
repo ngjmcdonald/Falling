@@ -24,7 +24,7 @@ namespace _Process{
 
 Void Stdout_obj::__construct(Dynamic p,bool out)
 {
-HX_STACK_PUSH("Stdout::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",64);
+HX_STACK_PUSH("Stdout::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",64);
 {
 	HX_STACK_LINE(65)
 	this->p = p;
@@ -51,7 +51,7 @@ Dynamic Stdout_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 int Stdout_obj::readBytes( ::haxe::io::Bytes str,int pos,int len){
-	HX_STACK_PUSH("Stdout::readBytes","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",76);
+	HX_STACK_PUSH("Stdout::readBytes","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",76);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(str,"str");
 	HX_STACK_ARG(pos,"pos");
@@ -85,7 +85,7 @@ int Stdout_obj::readBytes( ::haxe::io::Bytes str,int pos,int len){
 HX_DEFINE_DYNAMIC_FUNC3(Stdout_obj,readBytes,return )
 
 int Stdout_obj::readByte( ){
-	HX_STACK_PUSH("Stdout::readByte","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",70);
+	HX_STACK_PUSH("Stdout::readByte","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",70);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(71)
 	if (((this->readBytes(this->buf,(int)0,(int)1) == (int)0))){

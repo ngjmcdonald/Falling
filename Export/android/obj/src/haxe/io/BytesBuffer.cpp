@@ -11,7 +11,7 @@ namespace io{
 
 Void BytesBuffer_obj::__construct()
 {
-HX_STACK_PUSH("BytesBuffer::new","/usr/lib/haxe/std/haxe/io/BytesBuffer.hx",42);
+HX_STACK_PUSH("BytesBuffer::new","C:\\HaxeToolkit\\haxe/std/haxe/io/BytesBuffer.hx",42);
 {
 	HX_STACK_LINE(42)
 	this->b = Array_obj< unsigned char >::__new();
@@ -34,7 +34,7 @@ Dynamic BytesBuffer_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::haxe::io::Bytes BytesBuffer_obj::getBytes( ){
-	HX_STACK_PUSH("BytesBuffer::getBytes","/usr/lib/haxe/std/haxe/io/BytesBuffer.hx",123);
+	HX_STACK_PUSH("BytesBuffer::getBytes","C:\\HaxeToolkit\\haxe/std/haxe/io/BytesBuffer.hx",123);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(139)
 	::haxe::io::Bytes bytes = ::haxe::io::Bytes_obj::__new(this->b->length,this->b);		HX_STACK_VAR(bytes,"bytes");

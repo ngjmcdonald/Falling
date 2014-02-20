@@ -11,7 +11,7 @@ namespace io{
 
 Void Bytes_obj::__construct(int length,Array< unsigned char > b)
 {
-HX_STACK_PUSH("Bytes::new","/usr/lib/haxe/std/haxe/io/Bytes.hx",29);
+HX_STACK_PUSH("Bytes::new","C:\\HaxeToolkit\\haxe/std/haxe/io/Bytes.hx",29);
 {
 	HX_STACK_LINE(30)
 	this->length = length;
@@ -36,7 +36,7 @@ Dynamic Bytes_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::haxe::io::Bytes Bytes_obj::sub( int pos,int len){
-	HX_STACK_PUSH("Bytes::sub","/usr/lib/haxe/std/haxe/io/Bytes.hx",99);
+	HX_STACK_PUSH("Bytes::sub","C:\\HaxeToolkit\\haxe/std/haxe/io/Bytes.hx",99);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pos,"pos");
 	HX_STACK_ARG(len,"len");
@@ -54,7 +54,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Bytes_obj,sub,return )
 
 Void Bytes_obj::blit( int pos,::haxe::io::Bytes src,int srcpos,int len){
 {
-		HX_STACK_PUSH("Bytes::blit","/usr/lib/haxe/std/haxe/io/Bytes.hx",68);
+		HX_STACK_PUSH("Bytes::blit","C:\\HaxeToolkit\\haxe/std/haxe/io/Bytes.hx",68);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(pos,"pos");
 		HX_STACK_ARG(src,"src");
@@ -103,7 +103,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC4(Bytes_obj,blit,(void))
 
 ::haxe::io::Bytes Bytes_obj::alloc( int length){
-	HX_STACK_PUSH("Bytes::alloc","/usr/lib/haxe/std/haxe/io/Bytes.hx",250);
+	HX_STACK_PUSH("Bytes::alloc","C:\\HaxeToolkit\\haxe/std/haxe/io/Bytes.hx",250);
 	HX_STACK_ARG(length,"length");
 	HX_STACK_LINE(260)
 	Array< unsigned char > a = Array_obj< unsigned char >::__new();		HX_STACK_VAR(a,"a");
@@ -120,7 +120,7 @@ HX_DEFINE_DYNAMIC_FUNC4(Bytes_obj,blit,(void))
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Bytes_obj,alloc,return )
 
 ::haxe::io::Bytes Bytes_obj::ofString( ::String s){
-	HX_STACK_PUSH("Bytes::ofString","/usr/lib/haxe/std/haxe/io/Bytes.hx",275);
+	HX_STACK_PUSH("Bytes::ofString","C:\\HaxeToolkit\\haxe/std/haxe/io/Bytes.hx",275);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_LINE(286)
 	Array< unsigned char > a = Array_obj< unsigned char >::__new();		HX_STACK_VAR(a,"a");
@@ -134,7 +134,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Bytes_obj,alloc,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Bytes_obj,ofString,return )
 
 ::haxe::io::Bytes Bytes_obj::ofData( Array< unsigned char > b){
-	HX_STACK_PUSH("Bytes::ofData","/usr/lib/haxe/std/haxe/io/Bytes.hx",324);
+	HX_STACK_PUSH("Bytes::ofData","C:\\HaxeToolkit\\haxe/std/haxe/io/Bytes.hx",324);
 	HX_STACK_ARG(b,"b");
 	HX_STACK_LINE(324)
 	return ::haxe::io::Bytes_obj::__new(b->length,b);

@@ -9,7 +9,7 @@
 
 Void Date_obj::__construct(int year,int month,int day,int hour,int min,int sec)
 {
-HX_STACK_PUSH("Date::new","/usr/lib/haxe/std/cpp/_std/Date.hx",26);
+HX_STACK_PUSH("Date::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/Date.hx",26);
 {
 	HX_STACK_LINE(26)
 	this->mSeconds = ::__hxcpp_new_date(year,month,day,hour,min,sec);
@@ -32,7 +32,7 @@ Dynamic Date_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::Date Date_obj::fromString( ::String s){
-	HX_STACK_PUSH("Date::fromString","/usr/lib/haxe/std/cpp/_std/Date.hx",60);
+	HX_STACK_PUSH("Date::fromString","C:\\HaxeToolkit\\haxe/std/cpp/_std/Date.hx",60);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_LINE(61)
 	switch( (int)(s.length)){

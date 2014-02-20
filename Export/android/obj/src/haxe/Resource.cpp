@@ -27,7 +27,7 @@ Dynamic Resource_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::haxe::io::Bytes Resource_obj::getBytes( ::String name){
-	HX_STACK_PUSH("Resource::getBytes","/usr/lib/haxe/std/cpp/_std/haxe/Resource.hx",33);
+	HX_STACK_PUSH("Resource::getBytes","C:\\HaxeToolkit\\haxe/std/cpp/_std/haxe/Resource.hx",33);
 	HX_STACK_ARG(name,"name");
 	HX_STACK_LINE(34)
 	Array< unsigned char > array = ::__hxcpp_resource_bytes(name);		HX_STACK_VAR(array,"array");

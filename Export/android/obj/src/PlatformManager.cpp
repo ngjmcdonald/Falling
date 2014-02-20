@@ -30,6 +30,9 @@
 #ifndef INCLUDED_flash_events_IEventDispatcher
 #include <flash/events/IEventDispatcher.h>
 #endif
+#ifndef INCLUDED_haxe_Log
+#include <haxe/Log.h>
+#endif
 #ifndef INCLUDED_hxMath
 #include <hxMath.h>
 #endif
@@ -45,7 +48,7 @@ HX_STACK_PUSH("PlatformManager::new","PlatformManager.hx",26);
 		HX_STACK_LINE(28)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
 		HX_STACK_LINE(28)
-		while(((_g < (int)20))){
+		while(((_g < (int)100))){
 			HX_STACK_LINE(28)
 			int i = (_g)++;		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(29)
@@ -72,10 +75,10 @@ Dynamic PlatformManager_obj::__Create(hx::DynamicArray inArgs)
 
 Void PlatformManager_obj::returnPlatform( ::Platform platfrm){
 {
-		HX_STACK_PUSH("PlatformManager::returnPlatform","PlatformManager.hx",41);
+		HX_STACK_PUSH("PlatformManager::returnPlatform","PlatformManager.hx",52);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(platfrm,"platfrm");
-		HX_STACK_LINE(41)
+		HX_STACK_LINE(52)
 		this->platforms->add(platfrm);
 	}
 return null();
@@ -84,23 +87,38 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(PlatformManager_obj,returnPlatform,(void))
 
-::Platform PlatformManager_obj::getPlatform( Float sHeight,Float sWidth){
+::Platform PlatformManager_obj::getPlatform( Float sHeight,Float sWidth,hx::Null< bool >  __o_isSetLocation){
+bool isSetLocation = __o_isSetLocation.Default(false);
 	HX_STACK_PUSH("PlatformManager::getPlatform","PlatformManager.hx",34);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(sHeight,"sHeight");
 	HX_STACK_ARG(sWidth,"sWidth");
-	HX_STACK_LINE(35)
-	::Platform pltfrm = this->platforms->pop();		HX_STACK_VAR(pltfrm,"pltfrm");
-	HX_STACK_LINE(36)
-	pltfrm->set_x((::Math_obj::random() * sWidth));
-	HX_STACK_LINE(37)
-	pltfrm->set_y((::Math_obj::random() * sHeight));
-	HX_STACK_LINE(38)
-	return pltfrm;
+	HX_STACK_ARG(isSetLocation,"isSetLocation");
+{
+		HX_STACK_LINE(35)
+		::Platform pltfrm = this->platforms->pop();		HX_STACK_VAR(pltfrm,"pltfrm");
+		HX_STACK_LINE(36)
+		if ((!(isSetLocation))){
+			HX_STACK_LINE(39)
+			pltfrm->set_x(::Math_obj::floor((::Math_obj::random() * sWidth)));
+			HX_STACK_LINE(40)
+			pltfrm->set_y((::Math_obj::floor((::Math_obj::random() * sHeight)) * (int)200));
+		}
+		else{
+			HX_STACK_LINE(42)
+			pltfrm->set_x(sWidth);
+			HX_STACK_LINE(43)
+			pltfrm->set_y(sHeight);
+		}
+		HX_STACK_LINE(47)
+		::haxe::Log_obj::trace(((pltfrm->get_y() + HX_CSTRING(" ")) + pltfrm->get_x()),hx::SourceInfo(HX_CSTRING("PlatformManager.hx"),47,HX_CSTRING("PlatformManager"),HX_CSTRING("getPlatform")));
+		HX_STACK_LINE(49)
+		return pltfrm;
+	}
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC2(PlatformManager_obj,getPlatform,return )
+HX_DEFINE_DYNAMIC_FUNC3(PlatformManager_obj,getPlatform,return )
 
 ::PlatformManager PlatformManager_obj::_instance;
 

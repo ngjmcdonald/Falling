@@ -29,7 +29,7 @@ Dynamic Log_obj::__Create(hx::DynamicArray inArgs)
 HX_BEGIN_DEFAULT_FUNC(__default_trace,Log_obj)
 Void run(Dynamic v,Dynamic infos){
 {
-		HX_STACK_PUSH("Log::trace","/usr/lib/haxe/std/haxe/Log.hx",45);
+		HX_STACK_PUSH("Log::trace","C:\\HaxeToolkit\\haxe/std/haxe/Log.hx",45);
 		HX_STACK_ARG(v,"v");
 		HX_STACK_ARG(infos,"infos");
 		HX_STACK_LINE(45)

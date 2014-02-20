@@ -8,7 +8,7 @@ namespace io{
 
 Void Eof_obj::__construct()
 {
-HX_STACK_PUSH("Eof::new","/usr/lib/haxe/std/haxe/io/Eof.hx",28);
+HX_STACK_PUSH("Eof::new","C:\\HaxeToolkit\\haxe/std/haxe/io/Eof.hx",28);
 {
 }
 ;
@@ -29,7 +29,7 @@ Dynamic Eof_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::String Eof_obj::toString( ){
-	HX_STACK_PUSH("Eof::toString","/usr/lib/haxe/std/haxe/io/Eof.hx",30);
+	HX_STACK_PUSH("Eof::toString","C:\\HaxeToolkit\\haxe/std/haxe/io/Eof.hx",30);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(30)
 	return HX_CSTRING("Eof");

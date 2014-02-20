@@ -23,7 +23,7 @@ Dynamic Reflect_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 bool Reflect_obj::hasField( Dynamic o,::String field){
-	HX_STACK_PUSH("Reflect::hasField","/usr/lib/haxe/std/cpp/_std/Reflect.hx",24);
+	HX_STACK_PUSH("Reflect::hasField","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",24);
 	HX_STACK_ARG(o,"o");
 	HX_STACK_ARG(field,"field");
 	HX_STACK_LINE(24)
@@ -34,7 +34,7 @@ bool Reflect_obj::hasField( Dynamic o,::String field){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Reflect_obj,hasField,return )
 
 Dynamic Reflect_obj::field( Dynamic o,::String field){
-	HX_STACK_PUSH("Reflect::field","/usr/lib/haxe/std/cpp/_std/Reflect.hx",28);
+	HX_STACK_PUSH("Reflect::field","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",28);
 	HX_STACK_ARG(o,"o");
 	HX_STACK_ARG(field,"field");
 	HX_STACK_LINE(28)
@@ -45,7 +45,7 @@ Dynamic Reflect_obj::field( Dynamic o,::String field){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Reflect_obj,field,return )
 
 Dynamic Reflect_obj::callMethod( Dynamic o,Dynamic func,Dynamic args){
-	HX_STACK_PUSH("Reflect::callMethod","/usr/lib/haxe/std/cpp/_std/Reflect.hx",46);
+	HX_STACK_PUSH("Reflect::callMethod","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",46);
 	HX_STACK_ARG(o,"o");
 	HX_STACK_ARG(func,"func");
 	HX_STACK_ARG(args,"args");
@@ -64,7 +64,7 @@ Dynamic Reflect_obj::callMethod( Dynamic o,Dynamic func,Dynamic args){
 STATIC_HX_DEFINE_DYNAMIC_FUNC3(Reflect_obj,callMethod,return )
 
 Array< ::String > Reflect_obj::fields( Dynamic o){
-	HX_STACK_PUSH("Reflect::fields","/usr/lib/haxe/std/cpp/_std/Reflect.hx",53);
+	HX_STACK_PUSH("Reflect::fields","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",53);
 	HX_STACK_ARG(o,"o");
 	HX_STACK_LINE(54)
 	if (((o == null()))){
@@ -83,7 +83,7 @@ Array< ::String > Reflect_obj::fields( Dynamic o){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,fields,return )
 
 bool Reflect_obj::isFunction( Dynamic f){
-	HX_STACK_PUSH("Reflect::isFunction","/usr/lib/haxe/std/cpp/_std/Reflect.hx",60);
+	HX_STACK_PUSH("Reflect::isFunction","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",60);
 	HX_STACK_ARG(f,"f");
 	HX_STACK_LINE(60)
 	return (bool((f != null())) && bool((f->__GetType() == ::vtFunction)));
@@ -93,7 +93,7 @@ bool Reflect_obj::isFunction( Dynamic f){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isFunction,return )
 
 bool Reflect_obj::compareMethods( Dynamic f1,Dynamic f2){
-	HX_STACK_PUSH("Reflect::compareMethods","/usr/lib/haxe/std/cpp/_std/Reflect.hx",68);
+	HX_STACK_PUSH("Reflect::compareMethods","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",68);
 	HX_STACK_ARG(f1,"f1");
 	HX_STACK_ARG(f2,"f2");
 	HX_STACK_LINE(69)
@@ -114,7 +114,7 @@ bool Reflect_obj::compareMethods( Dynamic f1,Dynamic f2){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Reflect_obj,compareMethods,return )
 
 bool Reflect_obj::isObject( Dynamic v){
-	HX_STACK_PUSH("Reflect::isObject","/usr/lib/haxe/std/cpp/_std/Reflect.hx",76);
+	HX_STACK_PUSH("Reflect::isObject","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",76);
 	HX_STACK_ARG(v,"v");
 	HX_STACK_LINE(77)
 	if (((v == null()))){
@@ -131,7 +131,7 @@ bool Reflect_obj::isObject( Dynamic v){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isObject,return )
 
 bool Reflect_obj::deleteField( Dynamic o,::String field){
-	HX_STACK_PUSH("Reflect::deleteField","/usr/lib/haxe/std/cpp/_std/Reflect.hx",87);
+	HX_STACK_PUSH("Reflect::deleteField","C:\\HaxeToolkit\\haxe/std/cpp/_std/Reflect.hx",87);
 	HX_STACK_ARG(o,"o");
 	HX_STACK_ARG(field,"field");
 	HX_STACK_LINE(88)

@@ -23,11 +23,11 @@ namespace io{
 
 Void Process_obj::__construct(::String cmd,Array< ::String > args)
 {
-HX_STACK_PUSH("Process::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",100);
+HX_STACK_PUSH("Process::new","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",100);
 {
 	struct _Function_1_1{
-		inline static Dynamic Block( Array< ::String > &args,::String &cmd){
-			HX_STACK_PUSH("*::closure","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",101);
+		inline static Dynamic Block( ::String &cmd,Array< ::String > &args){
+			HX_STACK_PUSH("*::closure","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",101);
 			{
 				HX_STACK_LINE(101)
 				try{
@@ -48,7 +48,7 @@ HX_STACK_PUSH("Process::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",100)
 		}
 	};
 	HX_STACK_LINE(101)
-	this->p = _Function_1_1::Block(args,cmd);
+	this->p = _Function_1_1::Block(cmd,args);
 	HX_STACK_LINE(102)
 	this->_stdin = ::sys::io::_Process::Stdin_obj::__new(this->p);
 	HX_STACK_LINE(103)
@@ -75,7 +75,7 @@ Dynamic Process_obj::__Create(hx::DynamicArray inArgs)
 
 Void Process_obj::close( ){
 {
-		HX_STACK_PUSH("Process::close","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",115);
+		HX_STACK_PUSH("Process::close","C:\\HaxeToolkit\\haxe/std/cpp/_std/sys/io/Process.hx",115);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(115)
 		::sys::io::Process_obj::_close(this->p);

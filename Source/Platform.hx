@@ -2,6 +2,7 @@ package ;
 import flash.display.Sprite;
 import openfl.Assets;
 import flash.display.Bitmap;
+import flash.events.Event;
 
 /**
  * ...
@@ -18,6 +19,18 @@ class Platform extends Sprite
         myGraphic = bitmap;
         
 		addChild(bitmap);
+		
+		this.addEventListener(Event.ENTER_FRAME, OnEnterFrame);
+	}
+	private function OnEnterFrame(e:Event) {
+		if (stage != null) {
+			//trace();
+			if (this.y > stage.height) {
+				trace(" bye bye");
+				PlatformManager.instance().returnPlatform(this);
+			}
+		}
+		
 	}
 	
 }

@@ -63,6 +63,9 @@ class ApplicationMain {
 		
 		
 		
+		
+		
+		
 		var loader:Loader = new Loader();
 		loaders.set("assets/platform.png", loader);
 		total ++;

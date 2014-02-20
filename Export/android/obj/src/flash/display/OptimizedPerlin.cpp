@@ -259,7 +259,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 								HX_STACK_LINE(863)
 								hash = (int(p->__get((BB + (int)1))) & int((int)15));
 								struct _Function_7_1{
-									inline static Float Block( int &hash,Float &x1,Float &y1){
+									inline static Float Block( Float &y1,Float &x1,int &hash){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",864);
 										{
 											HX_STACK_LINE(864)
@@ -269,7 +269,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_2{
-									inline static Float Block( int &hash,Float &x1,Float &z1,Float &y1){
+									inline static Float Block( Float &y1,Float &x1,int &hash,Float &z1){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",864);
 										{
 											HX_STACK_LINE(864)
@@ -279,11 +279,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(864)
-								g1 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_1::Block(hash,x1,y1)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_2::Block(hash,x1,z1,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z1)) )) )) )));
+								g1 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_1::Block(y1,x1,hash)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_2::Block(y1,x1,hash,z1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z1)) )) )) )));
 								HX_STACK_LINE(866)
 								hash = (int(p->__get((AB + (int)1))) & int((int)15));
 								struct _Function_7_3{
-									inline static Float Block( int &hash,Float &x,Float &y1){
+									inline static Float Block( Float &y1,int &hash,Float &x){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",867);
 										{
 											HX_STACK_LINE(867)
@@ -293,7 +293,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_4{
-									inline static Float Block( int &hash,Float &x,Float &z1,Float &y1){
+									inline static Float Block( Float &y1,int &hash,Float &x,Float &z1){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",867);
 										{
 											HX_STACK_LINE(867)
@@ -303,11 +303,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(867)
-								g2 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_3::Block(hash,x,y1)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_4::Block(hash,x,z1,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z1)) )) )) )));
+								g2 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_3::Block(y1,hash,x)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_4::Block(y1,hash,x,z1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z1)) )) )) )));
 								HX_STACK_LINE(869)
 								hash = (int(p->__get((BA + (int)1))) & int((int)15));
 								struct _Function_7_5{
-									inline static Float Block( int &hash,Float &x1,Float &y){
+									inline static Float Block( Float &x1,Float &y,int &hash){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",870);
 										{
 											HX_STACK_LINE(870)
@@ -317,7 +317,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_6{
-									inline static Float Block( int &hash,Float &x1,Float &y,Float &z1){
+									inline static Float Block( Float &y,Float &x1,int &hash,Float &z1){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",870);
 										{
 											HX_STACK_LINE(870)
@@ -327,11 +327,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(870)
-								g3 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_5::Block(hash,x1,y)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_6::Block(hash,x1,y,z1)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z1)) )) )) )));
+								g3 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_5::Block(x1,y,hash)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_6::Block(y,x1,hash,z1)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z1)) )) )) )));
 								HX_STACK_LINE(872)
 								hash = (int(p->__get((AA + (int)1))) & int((int)15));
 								struct _Function_7_7{
-									inline static Float Block( int &hash,Float &x,Float &y){
+									inline static Float Block( Float &y,int &hash,Float &x){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",873);
 										{
 											HX_STACK_LINE(873)
@@ -341,7 +341,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_8{
-									inline static Float Block( int &hash,Float &x,Float &y,Float &z1){
+									inline static Float Block( Float &y,int &hash,Float &x,Float &z1){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",873);
 										{
 											HX_STACK_LINE(873)
@@ -351,11 +351,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(873)
-								g4 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_7::Block(hash,x,y)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_8::Block(hash,x,y,z1)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z1)) )) )) )));
+								g4 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_7::Block(y,hash,x)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_8::Block(y,hash,x,z1)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z1)) )) )) )));
 								HX_STACK_LINE(875)
 								hash = (int(p->__get(BB)) & int((int)15));
 								struct _Function_7_9{
-									inline static Float Block( int &hash,Float &x1,Float &y1){
+									inline static Float Block( Float &y1,Float &x1,int &hash){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",876);
 										{
 											HX_STACK_LINE(876)
@@ -365,7 +365,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_10{
-									inline static Float Block( int &hash,Float &x1,Float &z,Float &y1){
+									inline static Float Block( Float &y1,Float &z,Float &x1,int &hash){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",876);
 										{
 											HX_STACK_LINE(876)
@@ -375,11 +375,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(876)
-								g5 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_9::Block(hash,x1,y1)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_10::Block(hash,x1,z,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z)) )) )) )));
+								g5 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_9::Block(y1,x1,hash)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_10::Block(y1,z,x1,hash)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z)) )) )) )));
 								HX_STACK_LINE(878)
 								hash = (int(p->__get(AB)) & int((int)15));
 								struct _Function_7_11{
-									inline static Float Block( int &hash,Float &x,Float &y1){
+									inline static Float Block( Float &y1,int &hash,Float &x){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",879);
 										{
 											HX_STACK_LINE(879)
@@ -389,7 +389,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_12{
-									inline static Float Block( int &hash,Float &x,Float &z,Float &y1){
+									inline static Float Block( Float &y1,Float &z,int &hash,Float &x){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",879);
 										{
 											HX_STACK_LINE(879)
@@ -399,11 +399,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(879)
-								g6 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_11::Block(hash,x,y1)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_12::Block(hash,x,z,y1)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z)) )) )) )));
+								g6 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_11::Block(y1,hash,x)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y1)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_12::Block(y1,z,hash,x)) : Float((  (((hash < (int)4))) ? Float(-(y1)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z)) )) )) )));
 								HX_STACK_LINE(881)
 								hash = (int(p->__get(BA)) & int((int)15));
 								struct _Function_7_13{
-									inline static Float Block( int &hash,Float &x1,Float &y){
+									inline static Float Block( Float &x1,Float &y,int &hash){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",882);
 										{
 											HX_STACK_LINE(882)
@@ -413,7 +413,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_14{
-									inline static Float Block( int &hash,Float &x1,Float &y,Float &z){
+									inline static Float Block( Float &z,Float &y,Float &x1,int &hash){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",882);
 										{
 											HX_STACK_LINE(882)
@@ -423,11 +423,11 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(882)
-								g7 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_13::Block(hash,x1,y)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_14::Block(hash,x1,y,z)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z)) )) )) )));
+								g7 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_13::Block(x1,y,hash)) : Float((  (((hash < (int)8))) ? Float(-(x1)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_14::Block(z,y,x1,hash)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x1)) : Float(-(z)) )) )) )));
 								HX_STACK_LINE(884)
 								hash = (int(p->__get(AA)) & int((int)15));
 								struct _Function_7_15{
-									inline static Float Block( int &hash,Float &x,Float &y){
+									inline static Float Block( Float &y,int &hash,Float &x){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",885);
 										{
 											HX_STACK_LINE(885)
@@ -437,7 +437,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								struct _Function_7_16{
-									inline static Float Block( int &hash,Float &x,Float &y,Float &z){
+									inline static Float Block( Float &z,Float &y,int &hash,Float &x){
 										HX_STACK_PUSH("*::closure","flash/display/BitmapData.hx",885);
 										{
 											HX_STACK_LINE(885)
@@ -447,7 +447,7 @@ Void OptimizedPerlin_obj::fill( ::flash::display::BitmapData bitmap,Float _x,Flo
 									}
 								};
 								HX_STACK_LINE(885)
-								g8 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_15::Block(hash,x,y)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_16::Block(hash,x,y,z)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z)) )) )) )));
+								g8 = (((  (((((int(hash) & int((int)1))) == (int)0))) ? Float(_Function_7_15::Block(y,hash,x)) : Float((  (((hash < (int)8))) ? Float(-(x)) : Float(-(y)) )) )) + ((  (((((int(hash) & int((int)2))) == (int)0))) ? Float(_Function_7_16::Block(z,y,hash,x)) : Float((  (((hash < (int)4))) ? Float(-(y)) : Float((  (((hash == (int)14))) ? Float(-(x)) : Float(-(z)) )) )) )));
 								HX_STACK_LINE(887)
 								hx::AddEq(g2,(u * ((g1 - g2))));
 								HX_STACK_LINE(888)

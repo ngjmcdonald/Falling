@@ -583,7 +583,7 @@ bool useCache = __o_useCache.Default(true);
 				HX_STACK_LINE(554)
 				if (((bool(useCache) && bool(::openfl::Assets_obj::cache->enabled)))){
 
-					HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_4_1,Dynamic,handler1,Array< ::String >,id1)
+					HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_4_1,Array< ::String >,id1,Dynamic,handler1)
 					Void run(::flash::display::BitmapData bitmapData){
 						HX_STACK_PUSH("*::_Function_4_1","openfl/Assets.hx",556);
 						HX_STACK_ARG(bitmapData,"bitmapData");
@@ -598,7 +598,7 @@ bool useCache = __o_useCache.Default(true);
 					HX_END_LOCAL_FUNC1((void))
 
 					HX_STACK_LINE(554)
-					library->loadBitmapData(symbolName, Dynamic(new _Function_4_1(handler1,id1)));
+					library->loadBitmapData(symbolName, Dynamic(new _Function_4_1(id1,handler1)));
 				}
 				else{
 					HX_STACK_LINE(563)
@@ -698,7 +698,7 @@ bool useCache = __o_useCache.Default(true);
 				HX_STACK_LINE(647)
 				if (((bool(useCache) && bool(::openfl::Assets_obj::cache->enabled)))){
 
-					HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_4_1,Dynamic,handler1,Array< ::String >,id1)
+					HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_4_1,Array< ::String >,id1,Dynamic,handler1)
 					Void run(::flash::text::Font font){
 						HX_STACK_PUSH("*::_Function_4_1","openfl/Assets.hx",649);
 						HX_STACK_ARG(font,"font");
@@ -713,7 +713,7 @@ bool useCache = __o_useCache.Default(true);
 					HX_END_LOCAL_FUNC1((void))
 
 					HX_STACK_LINE(647)
-					library->loadFont(symbolName, Dynamic(new _Function_4_1(handler1,id1)));
+					library->loadFont(symbolName, Dynamic(new _Function_4_1(id1,handler1)));
 				}
 				else{
 					HX_STACK_LINE(656)
@@ -858,7 +858,7 @@ bool useCache = __o_useCache.Default(true);
 				HX_STACK_LINE(768)
 				if (((bool(useCache) && bool(::openfl::Assets_obj::cache->enabled)))){
 
-					HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_4_1,Dynamic,handler1,Array< ::String >,id1)
+					HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_4_1,Array< ::String >,id1,Dynamic,handler1)
 					Void run(::flash::media::Sound sound){
 						HX_STACK_PUSH("*::_Function_4_1","openfl/Assets.hx",770);
 						HX_STACK_ARG(sound,"sound");
@@ -873,7 +873,7 @@ bool useCache = __o_useCache.Default(true);
 					HX_END_LOCAL_FUNC1((void))
 
 					HX_STACK_LINE(768)
-					library->loadSound(symbolName, Dynamic(new _Function_4_1(handler1,id1)));
+					library->loadSound(symbolName, Dynamic(new _Function_4_1(id1,handler1)));
 				}
 				else{
 					HX_STACK_LINE(777)

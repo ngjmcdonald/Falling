@@ -31,7 +31,7 @@ Dynamic Input_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::String Input_obj::readLine( ){
-	HX_STACK_PUSH("Input::readLine","/usr/lib/haxe/std/haxe/io/Input.hx",127);
+	HX_STACK_PUSH("Input::readLine","C:\\HaxeToolkit\\haxe/std/haxe/io/Input.hx",127);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(128)
 	::StringBuf buf = ::StringBuf_obj::__new();		HX_STACK_VAR(buf,"buf");
@@ -78,7 +78,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Input_obj,readLine,return )
 
 Void Input_obj::close( ){
 {
-		HX_STACK_PUSH("Input::close","/usr/lib/haxe/std/haxe/io/Input.hx",67);
+		HX_STACK_PUSH("Input::close","C:\\HaxeToolkit\\haxe/std/haxe/io/Input.hx",67);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -88,7 +88,7 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(Input_obj,close,(void))
 
 int Input_obj::readByte( ){
-	HX_STACK_PUSH("Input::readByte","/usr/lib/haxe/std/haxe/io/Input.hx",37);
+	HX_STACK_PUSH("Input::readByte","C:\\HaxeToolkit\\haxe/std/haxe/io/Input.hx",37);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(39)
 	hx::Throw (HX_CSTRING("Not implemented"));

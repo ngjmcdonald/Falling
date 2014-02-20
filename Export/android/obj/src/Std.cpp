@@ -23,7 +23,7 @@ Dynamic Std_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 bool Std_obj::is( Dynamic v,Dynamic t){
-	HX_STACK_PUSH("Std::is","/usr/lib/haxe/std/cpp/_std/Std.hx",23);
+	HX_STACK_PUSH("Std::is","C:\\HaxeToolkit\\haxe/std/cpp/_std/Std.hx",23);
 	HX_STACK_ARG(v,"v");
 	HX_STACK_ARG(t,"t");
 	HX_STACK_LINE(23)
@@ -34,7 +34,7 @@ bool Std_obj::is( Dynamic v,Dynamic t){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Std_obj,is,return )
 
 ::String Std_obj::string( Dynamic s){
-	HX_STACK_PUSH("Std::string","/usr/lib/haxe/std/cpp/_std/Std.hx",27);
+	HX_STACK_PUSH("Std::string","C:\\HaxeToolkit\\haxe/std/cpp/_std/Std.hx",27);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_LINE(27)
 	return (  (((s == null()))) ? ::String(HX_CSTRING("null")) : ::String(s->toString()) );
@@ -44,7 +44,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Std_obj,is,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,string,return )
 
 int Std_obj::_int( Float x){
-	HX_STACK_PUSH("Std::int","/usr/lib/haxe/std/cpp/_std/Std.hx",31);
+	HX_STACK_PUSH("Std::int","C:\\HaxeToolkit\\haxe/std/cpp/_std/Std.hx",31);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_LINE(31)
 	return ::__int__(x);
@@ -54,7 +54,7 @@ int Std_obj::_int( Float x){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,_int,return )
 
 Dynamic Std_obj::parseInt( ::String x){
-	HX_STACK_PUSH("Std::parseInt","/usr/lib/haxe/std/cpp/_std/Std.hx",35);
+	HX_STACK_PUSH("Std::parseInt","C:\\HaxeToolkit\\haxe/std/cpp/_std/Std.hx",35);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_LINE(35)
 	return ::__hxcpp_parse_int(x);
@@ -64,7 +64,7 @@ Dynamic Std_obj::parseInt( ::String x){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,parseInt,return )
 
 Float Std_obj::parseFloat( ::String x){
-	HX_STACK_PUSH("Std::parseFloat","/usr/lib/haxe/std/cpp/_std/Std.hx",39);
+	HX_STACK_PUSH("Std::parseFloat","C:\\HaxeToolkit\\haxe/std/cpp/_std/Std.hx",39);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_LINE(39)
 	return ::__hxcpp_parse_float(x);
